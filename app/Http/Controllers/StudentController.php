@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Student;
+use App\Family;
+class StudentController extends Controller
+{
+    public function index(){
+   		$data = Student::with(['family'])->get();
+    	return view('student.student')->with('data', $data);
+    }
+    public function newForm(){
+        $data = Family::all();
+    	return view('student.student_new_form')->with('data', $data);
+    }
+     public function store(Request $request){
+    	$newStudent = new Student();
+    	$newStudent->name = $request->name;
+    	$newStudent->dob = $request->dob;
+    	$newStudent->family_id = $request->family_id;
+    	$newStudent->save();
+    	return redirect('/student');
+    }
+    public function editForm($id){
+        $student = Student::find($id);
+        $family = Family::all();
+        return view('student.student_edit_form')
+                ->with('student',$student)
+                ->with('family',$family);
+    }
+    public function update(Request $request){
+        $student = Student::find($request->id);
+        $student->name = $request->name;
+        $student->dob = $request->dob;
+        $student->father_name = $request->father_name;
+        $student->address = $request->address;
+        $student->save();
+        return redirect('/student');
+    }
+
+    public function delete($id){
+        $student = Student::find($id);
+        $student->delete();
+        return redirect('/student');
+    }
+}
