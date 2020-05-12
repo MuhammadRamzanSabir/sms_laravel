@@ -29,3 +29,24 @@ Route::post('/family', 'FamilyController@store');
 Route::get('/family/delete/{id}', 'FamilyController@delete');
 Route::get('/family/edit/{id}', 'FamilyController@editForm');
 Route::post('/family/update', 'FamilyController@update');
+
+Route::get('/level', 'LevelController@index');
+Route::get('/level/new', 'LevelController@newForm');
+Route::post('/level', 'LevelController@store');
+Route::get('/level/delete/{id}', 'LevelController@delete');
+Route::get('/level/edit/{id}', 'LevelController@editForm');
+Route::post('/level/update', 'LevelController@update');
+
+Route::get('/group', 'GroupController@index');
+Route::get('/group/new', 'GroupController@newForm');
+Route::post('/group', 'GroupController@store');
+Route::get('/group/delete/{id}', 'GroupController@delete');
+Route::get('/group/edit/{id}', 'GroupController@editForm');
+Route::post('/group/update', 'GroupController@update');
+
+Route::get('/section', 'SectionController@index');
+Route::get('/section/new', 'SectionController@newForm');
+Route::post('/section', 'SectionController@store');
+Route::get('/section/delete/{id}', 'SectionController@delete');
+Route::get('/section/edit/{id}', 'SectionController@editForm');
+Route::post('/section/update', 'SectionController@update');

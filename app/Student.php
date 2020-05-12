@@ -10,4 +10,16 @@ class Student extends Model
     {
         return $this->belongsTo('App\Family', 'family_id');
     }
+    public function level()
+    {
+        return $this->belongsTo('App\Level', 'level_id');
+    }
+    public function group()
+    {
+        return $this->belongsTo('App\Group', 'group_id');
+    }
+    public function section()
+    {
+        return $this->belongsTo('App\Section', 'section_id');
+    }
 }

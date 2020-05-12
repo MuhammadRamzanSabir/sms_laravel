@@ -14,6 +14,9 @@
       <th scope="col">DOB</th>
       <th scope="col">Father Name</th>
       <th scope="col">Address</th>
+      <th scope="col">Level</th>
+      <th scope="col">Group</th>
+      <th scope="col">Section</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -25,6 +28,9 @@
       <td>{{ $d->dob}}</td>
       <td>{{ $d->family->father_name }}</td>
       <td>{{ $d->family->address}}</td>
+      <td>{{ $d->level->level}}</td>
+      <td>{{ $d->group->group}}</td>
+      <td>{{ $d->section->section}}</td>
       <td>
         <a href="{{ url('/student/edit') }}/{{ $d->id }}" class="btn btn-sm btn-primary">Edit</a>
         <a href="{{ url('/student/delete') }}/{{ $d->id }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>

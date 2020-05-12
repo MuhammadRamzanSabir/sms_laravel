@@ -19,6 +19,15 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/family') }}">Family</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/level') }}">Level</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/group') }}">Group</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/section') }}">Section</a>
+      </li>
     </ul>
   </div>
 </nav>

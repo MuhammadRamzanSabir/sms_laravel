@@ -18,8 +18,7 @@
       </div>
       <div class="form-group">
         <label>Select Family</label>
-        <select name="father_name" class="form-control form-control-sm" required>
-          <option value="">Select Family</option>
+        <select name="family_id" class="form-control form-control-sm" required>
           @foreach($family as $i=>$f)
             @if($f->id == $student->father_name)
               <option value="{{$f->id}}" selected>{{ $f->father_name}}</option>
@@ -29,6 +28,20 @@
           @endforeach
         </select>
       </div>
+
+      <div class="form-group">
+        <label>Select Level</label>
+        <select name="level_id" class="form-control form-control-sm" required>
+          @foreach($level as $i=>$f)
+            @if($f->id == $student->level)
+              <option value="{{$f->id}}" selected>{{ $f->level}}</option>
+            @else
+              <option value="{{$f->id}}">{{ $f->level}}</option>
+            @endif
+          @endforeach
+        </select>
+      </div>
+
       <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
