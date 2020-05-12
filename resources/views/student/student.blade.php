@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container" style="margin: 40px;">
-    <h2>Students</h2>
+<div>
     <a class="btn btn-sm btn-primary" href="{{ url('/student/new') }}">Add New Student</a>
     <br/>
     <br/>
