@@ -1,7 +1,12 @@
 @extends('layouts.master')
 
 @section('main-content')
-
+            
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Student</h4> 
+                </div>
+            </div>
             <div class="col-sm-12">
               <div class="white-box">
                   <div class="table-responsive">
@@ -59,4 +64,5 @@
             ]
         });
 </script>
+
 @endsection
