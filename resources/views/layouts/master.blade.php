@@ -298,6 +298,14 @@
                             <li><a class="nav-link" href="{{ url('/family') }}">Family</a></li>
                     
                 </ul>
+                <li><a href="#" class="waves-effect"><i class="mdi mdi-apps fa-fw"></i> <span class="hide-menu">Curriculum<span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a class="nav-link" href="{{ url('/level') }}">Level</a></li>
+                            <li><a class="nav-link" href="{{ url('/group') }}">Group</a></li>
+                            <li><a class="nav-link" href="{{ url('/section') }}">Section</a></li>
+                    
+                </ul>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -357,8 +365,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+     <script src="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+     <script src="{{url('/resources/admin')}}/js/custom.min.js"></script>
+     <link href="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 
     @yield('page-js')
 </body>
+
+
+
 
 </html>

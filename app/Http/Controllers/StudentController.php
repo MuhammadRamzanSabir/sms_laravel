@@ -54,11 +54,10 @@ class StudentController extends Controller
         $student = Student::find($request->id);
         $student->name = $request->name;
         $student->dob = $request->dob;
-        $student->father_name = $request->father_name;
-        $student->address = $request->address;
-        $student->level = $request->level;
-        $student->group = $request->group;
-        $student->section = $request->section;
+        $student->family_id = $request->family_id;
+        $student->level_id = $request->level_id;
+        $student->group_id = $request->group_id;
+        $student->section_id = $request->section_id;
         $student->save();
         return redirect('/student');
     }

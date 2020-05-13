@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 
-@section('content')
+@section('main-content')
 <div class="container" style="margin: 40px;">
   <div class="col-md-6">
     <h2>Edit Family</h2>

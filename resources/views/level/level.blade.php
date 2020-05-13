@@ -1,20 +1,15 @@
 @extends('layouts.master')
 
-@section('content')
-                <main>
-                    <div class="container-fluid">
-                        <h1 class="mt-4 float-left">Level</h1><br>
-    <a class="btn btn-sm btn-primary float-right" href="{{ url('/level/new') }}">Add New Level</a>
-                           <div><br><br><br>
-                              <ol class="breadcrumb mb-12">
-                                <li class="breadcrumb-item active">Level</li>
-                            </ol>
-                        </div>
-                    </div>
-                </main>
-<div class="container" style="margin: 0px;">
-   
-    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+@section('main-content')
+                <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Level</h4> 
+                </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="white-box">
+                  <div class="table-responsive">
+                      <table id="example23" class="display nowrap" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -36,4 +31,19 @@
   </tbody>
 </table>
 </div>
+</div>
+</div>
+@endsection
+
+
+@section('page-js')
+<script type="text/javascript">
+        $('#example23').DataTable({
+            dom: 'Bfrtip'
+            , buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        });
+</script>
+
 @endsection
