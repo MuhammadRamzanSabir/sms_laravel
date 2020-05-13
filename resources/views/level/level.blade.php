@@ -1,12 +1,20 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container" style="margin: 40px;">
-    <h2>Level</h2>
-    <a class="btn btn-sm btn-primary" href="{{ url('/level/new') }}">Add New Level</a>
-    <br/>
-    <br/>
-    <table class="table table-sm table-bordered">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4 float-left">Level</h1><br>
+    <a class="btn btn-sm btn-primary float-right" href="{{ url('/level/new') }}">Add New Level</a>
+                           <div><br><br><br>
+                              <ol class="breadcrumb mb-12">
+                                <li class="breadcrumb-item active">Level</li>
+                            </ol>
+                        </div>
+                    </div>
+                </main>
+<div class="container" style="margin: 0px;">
+   
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th scope="col">#</th>

@@ -1,12 +1,19 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container" style="margin: 40px;">
-    <h2>Section</h2>
-    <a class="btn btn-sm btn-primary" href="{{ url('/section/new') }}">Add New Section</a>
-    <br/>
-    <br/>
-    <table class="table table-sm table-bordered">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4 float-left">Section</h1><br>
+    <a class="btn btn-sm btn-primary float-right" href="{{ url('/section/new') }}">Add New Section</a>
+                        
+                              <ol class="breadcrumb mb-12">
+                                <li class="breadcrumb-item active">Section</li>
+                            </ol>
+                        </div>
+                    </div>
+                </main>
+<div class="container" style="margin: 0px;">  
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th scope="col">#</th>

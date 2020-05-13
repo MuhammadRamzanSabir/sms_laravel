@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('layouts.master');
 });
 Route::get('/student', 'StudentController@index');
 Route::get('/student/new', 'StudentController@newForm');
