@@ -30,6 +30,9 @@
     <link href="{{url('/resources/admin')}}/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="{{url('/resources/admin')}}/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="{{url('/resources/admin')}}/plugins/bower_components/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+     <link href="{{url('/resources/admin')}}/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -304,7 +307,7 @@
                             <li><a class="nav-link" href="{{ url('/level') }}">Level</a></li>
                             <li><a class="nav-link" href="{{ url('/group') }}">Group</a></li>
                             <li><a class="nav-link" href="{{ url('/section') }}">Section</a></li>
-                    
+                            <li><a class="nav-link" href="{{ url('/subject') }}">Subject</a></li>
                 </ul>
             </div>
         </div>
@@ -368,6 +371,8 @@
      <script src="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
      <script src="{{url('/resources/admin')}}/js/custom.min.js"></script>
      <link href="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+     <script src="{{url('/resources/admin')}}/plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="{{url('/resources/admin')}}/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
 
     @yield('page-js')
 </body>

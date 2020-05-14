@@ -71,6 +71,39 @@
                         @endforeach
                       </select>
                     </div>
+
+                    <div class="row">
+          <div class="col-lg-12">
+              <div class="white-box">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="box-title m-b-0">Select Subjects</h3>   
+                          @foreach($subject as $i=>$v)
+                          <div class="col-md-2">
+                            <div class="checkbox">
+                              
+        {{ $shouldCheck = false }}
+        @foreach($enrollments as $r=>$e)
+        @if($e->subject_id == $v->id)
+          {{ $shouldCheck = true }}
+        @endif
+        @endforeach
+
+        @if($shouldCheck)
+        <input id="subject_{{$v->id}}" type="checkbox" value="{{$v->id}}" name="subject_ids[]" checked>
+        @else
+        <input id="subject_{{$v->id}}" type="checkbox" value="{{$v->id}}" name="subject_ids[]">
+        @endif
+                            
+                            <label for="subject_{{$v->id}}"> {{ $v->title }}</label>
+                            </div>
+                          </div>
+                          @endforeach
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Update</button>
                </form>
               </div>

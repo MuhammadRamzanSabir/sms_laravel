@@ -60,9 +60,28 @@
             <option value="{{$f->id}}">{{ $f->section }}</option>
           @endforeach
         </select> </div>
-              
-                  <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Save</button>
-                  <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                  
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="white-box">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="box-title m-b-0">Select Subjects</h3>   
+                          @foreach($subject as $i=>$f)
+                          <div class="col-md-2">
+                            <div class="checkbox">
+                <input id="subject_{{$f->id}}" type="checkbox" value="{{$f->id}}" name="subject_ids[]">
+                            <label for="subject_{{$f->id}}"> {{ $f->title }}</label>
+                            </div>
+                          </div>
+                          @endforeach
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Save</button>
+              <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
               </form>
           </div>
       </div>

@@ -10,30 +10,30 @@
             <div class="col-sm-12">
               <div class="white-box">
                   <div class="table-responsive">
-                      <table id="example23" class="display nowrap" cellspacing="0" width="100%">
-                          <thead>
-                              <tr>
-                                  <th>Sr#</th>
-                                  <th>Name</th>
-                                  <th>Father Name</th>
-                                  <th>Level</th>
-                                  <th>Group</th>
-                                  <th>Section</th>
-                                  <th>Action</th>
-                              </tr>
-                          </thead>
-                          <tfoot>
-                              <tr>
-                                  <th>Sr#</th>
-                                  <th>Name</th>
-                                  <th>Father Name</th>
-                                  <th>Level</th>
-                                  <th>Group</th>
-                                  <th>Section</th>
-                                  <th>Action</th>
-                              </tr>
-                          </tfoot>
-                          <tbody>
+    <table id="example23" class="display nowrap" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Sr#</th>
+            <th>Name</th>
+            <th>Father Name</th>
+            <th>Level</th>
+            <th>Group</th>
+            <th>Section</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Sr#</th>
+            <th>Name</th>
+            <th>Father Name</th>
+            <th>Level</th>
+            <th>Group</th>
+            <th>Section</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+    <tbody>
     @foreach($data as $i=>$d)
     <tr>
       <th scope="row">{{ $i+1 }}</th>

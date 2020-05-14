@@ -50,3 +50,10 @@ Route::post('/section', 'SectionController@store');
 Route::get('/section/delete/{id}', 'SectionController@delete');
 Route::get('/section/edit/{id}', 'SectionController@editForm');
 Route::post('/section/update', 'SectionController@update');
+
+Route::get('/subject', 'SubjectController@index');
+Route::get('/subject/new', 'SubjectController@newForm');
+Route::post('/subject', 'SubjectController@store');
+Route::get('/subject/delete/{id}', 'SubjectController@delete');
+Route::get('/subject/edit/{id}', 'SubjectController@editForm');
+Route::post('/subject/update', 'SubjectController@update');
